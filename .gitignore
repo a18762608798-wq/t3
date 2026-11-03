@@ -1,0 +1,19 @@
+# 白名单：只跟踪配置和仓库说明，其他顶层文件、目录默认忽略。
+/*
+!/.gitignore
+!/README.md
+!/AGENTS.md
+!/userdata/
+
+# userdata 内只保留用户配置、快捷键和自定义主题。
+/userdata/*
+!/userdata/settings.json
+!/userdata/keybindings.json
+!/userdata/themes/
+
+# 即使位于配置目录，也不跟踪备份和编辑器临时文件。
+*.bak
+*.tmp
+*.swp
+*.swo
+*~

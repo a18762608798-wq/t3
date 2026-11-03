@@ -1,0 +1,116 @@
+{
+  "providerModelPreferences": {
+    "codex_opencode_go": {
+      "hiddenModels": [
+        "gpt-6.1-sol",
+        "gpt-6-astra",
+        "gpt-6-sol",
+        "gpt-6-luna",
+        "gpt-6.1-terra",
+        "gpt-5.6-terra",
+        "gpt-5.6-luna",
+        "gpt-5.5",
+        "gpt-5.6-sol"
+      ],
+      "modelOrder": []
+    },
+    "codex": {
+      "hiddenModels": [
+        "gpt-6-astra",
+        "gpt-6.1-terra",
+        "gpt-6-sol",
+        "gpt-6-luna",
+        "gpt-5.6-sol",
+        "gpt-5.6-terra",
+        "gpt-5.6-luna"
+      ],
+      "modelOrder": []
+    }
+  },
+  "projectSettingsFolded": true,
+  "idleCompaction": "onReturn",
+  "providerInstances": {
+    "codex_opencode_go": {
+      "driver": "codex",
+      "displayName": "OpenCode Go",
+      "enabled": true,
+      "config": {
+        "homePath": "/home/dell/.codex",
+        "launchArgs": "-c model_provider=opencode-go -c model=muse-spark-1.3-contributor",
+        "setupMode": "existing",
+        "customModels": [
+          {
+            "slug": "muse-spark-1.3-contributor",
+            "name": "Muse Spark 1.3 Contributor",
+            "capabilities": {
+              "optionDescriptors": [
+                {
+                  "id": "reasoningEffort",
+                  "label": "Reasoning",
+                  "type": "select",
+                  "options": [
+                    {
+                      "id": "low",
+                      "label": "Low"
+                    },
+                    {
+                      "id": "medium",
+                      "label": "Medium"
+                    },
+                    {
+                      "id": "high",
+                      "label": "High"
+                    },
+                    {
+                      "id": "xhigh",
+                      "label": "Extra High",
+                      "isDefault": true
+                    }
+                  ],
+                  "currentValue": "xhigh"
+                }
+              ]
+            }
+          },
+          {
+            "slug": "deepseek-v4.1-flash",
+            "name": "DeepSeek V4.1 Flash",
+            "capabilities": {
+              "optionDescriptors": [
+                {
+                  "id": "reasoningEffort",
+                  "label": "Reasoning",
+                  "type": "select",
+                  "options": [
+                    {
+                      "id": "low",
+                      "label": "Low"
+                    },
+                    {
+                      "id": "medium",
+                      "label": "Medium"
+                    },
+                    {
+                      "id": "high",
+                      "label": "High"
+                    },
+                    {
+                      "id": "xhigh",
+                      "label": "Extra High",
+                      "isDefault": true
+                    }
+                  ],
+                  "currentValue": "xhigh"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "claudeAgent": {
+      "driver": "claudeAgent",
+      "enabled": false
+    }
+  }
+}
