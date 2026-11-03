@@ -22,3 +22,14 @@
 - 其他未加入白名单的新文件，以及 `*.bak`、`*.tmp`、`*.swp`、`*.swo`、`*~`。
 
 新增需要记录的配置时，在 `.gitignore` 中补充白名单。凭据应保留在被忽略的凭据目录中，不要写入已跟踪的配置。恢复配置前先退出 T3；本仓库不包含会话、附件和登录状态。
+
+当前启用的 provider：
+
+- `codex`：Codex，保留原配置。
+- `codex_opencode_go`：OpenCode Go，使用 Codex 驱动，保留原配置。
+- `pi`：Pi Codex，使用 Pi 驱动，默认模型为 `openai-codex/gpt-6.1-sol`。
+- `pi_opencode_go`：Pi OpenCode Go，使用 Pi 驱动，提供 `opencode-go/muse-spark-1.3-contributor` 和 `opencode-go/deepseek-v4.1-flash`，默认使用 Muse。
+
+两个 Pi 实例使用 `/home/dell/.pi/agent/bin/pi`，通过 `PI_CODING_AGENT_DIR` 复用 `/home/dell/.pi/agent` 中的设置和认证。启动参数分别指定默认 provider、模型及模型切换范围，T3 的模型偏好仅显示各实例对应的模型。Pi 的安装与凭据由 `~/.pi` 单独管理，不复制到此仓库；迁移到其他机器时需要调整路径并配置认证。
+
+模型范围与现有 Codex、OpenCode Go 实例的选择对齐。2026-11-03 核对来源为本机 Codex app-server 的 `account/read`、`model/list`，以及 [OpenCode Go 实时模型目录](https://opencode.ai/inference/go/v1/models)；三个选定模型都在相应目录中。套餐说明见 [OpenAI 官方模型文档](https://learn.chatgpt.com/docs/models?surface=web) 和 [OpenCode Go 文档](https://opencode.ai/v2/docs/console/go/)。Pi 的本地模型缓存不作为套餐权限依据。
