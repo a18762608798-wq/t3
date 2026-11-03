@@ -387,6 +387,28 @@
       ]
     }
   },
+  "defaultModelSelection": {
+    "instanceId": "codex",
+    "model": "gpt-6.1-sol",
+    "options": [
+      {
+        "id": "reasoningEffort",
+        "value": "max"
+      },
+      {
+        "id": "serviceTier",
+        "value": "default"
+      }
+    ]
+  },
+  "projectSettingsOverrides": {
+    "1778f5fe-c2d0-4732-b884-a8ea31fa4e10": {
+      "defaultThreadEnvMode": "worktree"
+    },
+    "bdd52b8c-34c6-4d98-90ee-08f573cb5c3b": {
+      "defaultThreadEnvMode": "worktree"
+    }
+  },
   "projectSettingsFolded": true,
   "idleCompaction": "onReturn",
   "providerInstances": {
@@ -519,6 +541,10 @@
           }
         ]
       }
+    },
+    "codex": {
+      "driver": "codex",
+      "enabled": true
     }
   }
 }
